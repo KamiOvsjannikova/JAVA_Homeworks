@@ -7,7 +7,7 @@ public class HomeWork_27_06 {
         System.out.println(myStr.charAt(myStr.length() - 2));
 
         System.out.println(myStr.contains("Java"));
-        System.out.println("I study Basic Java!".substring(0, 13));
+        System.out.println("I study Basic Java!".substring(0, 13) +1);
         System.out.println(myStr.replace("a", "o"));
         System.out.println(myStr.toUpperCase());
         System.out.println(myStr.toLowerCase());
