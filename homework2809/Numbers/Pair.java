@@ -2,34 +2,34 @@ package org.example.homework2809.Numbers;
 
 public class Pair {
     public static void main(String[] args) {
-        // Создание объекта Pair с использованием конструктора по умолчанию
+        // создаю объект Pair с использованием конструктора 1 
         Pair pair1 = new Pair();
 
-        // Создание объекта Pair с использованием конструктора с параметрами
-        Pair pair2 = new Pair("hello", "world");
+        // создаю объект Pair с использованием конструктора 2 с параметрами
+        Pair pair2 = new Pair("Hi", "Kamilla");
     }
     private String first;
     private String second;
 
-    // Блок инициализации
+    // блок инициализации, в котором выведите в консоль значение полей first и second
     {
         System.out.println("Значение полей first и second в блоке инициализации:");
         System.out.println("first: " + first);
         System.out.println("second: " + second);
 
-        // Присвоение значений
+        // присваиваю полю first значение “one”, а полю second значение «two».
         first = "one";
         second = "two";
     }
 
-    // Конструктор по умолчанию
+    // Конструктор1
     public Pair() {
         System.out.println("Значение полей first и second в конструкторе по умолчанию:");
         System.out.println("first: " + first);
         System.out.println("second: " + second);
     }
 
-    // Конструктор с параметрами
+    // Конструктор 2 с параметрами
     public Pair(String first, String second) {
         this.first = first;
         this.second = second;
@@ -38,7 +38,7 @@ public class Pair {
         System.out.println("second: " + second);
     }
 
-    // Геттеры
+    // Getter
     public String getFirst() {
         return first;
     }
