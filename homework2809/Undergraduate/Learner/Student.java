@@ -22,47 +22,43 @@ public class Student {
         this.lastName = lastName;
         this.groupNumber = groupNumber;
  }
-    public Student() { //konstruktor 2
-        this.name = "";
-        this.lastName = "";
-        this.groupNumber = 0;
+    public Student (Student clone){ //clone konstructor2
+        this(clone.name,clone.lastName, clone.getGroupNumber());
+        this.groupNumber= clone.groupNumber ;
     }
-
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public String getLastName() {
+
         return lastName;
     }
 
     public void setLastName(String lastName) {
+
         this.lastName = lastName;
     }
 
     public int getGroupNumber() {
+
         return groupNumber;
     }
 
-    public void setGroupNumber(int groupNumber) {
-        this.groupNumber = groupNumber;
-    }
-
-    //proverka na polozitelnoe grup
+    //proverka na polozitelnoe znach. grup
 
     public void setGroupNumber(int groupNumber) {
-        if (groupNumber <= 0) {
-            throw new RuntimeException("The Group number must be positive");
-        }
-        this.groupNumber = groupNumber;
+        if (groupNumber < 0) {
+            throw new RuntimeException("Group number must be positive");
+        } else
+            this.groupNumber = groupNumber;// esli nomer gruppi boljshe nulja, to peredajom vvedjonnuj nomer gruppi  i vivodim
     }
-    public void goToNextGroup() {
-        groupNumber++;
+    public void increaseGroupNumber() {
+        this.groupNumber++;
     }
 }
-
-
