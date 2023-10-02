@@ -22,9 +22,9 @@ public class Main {
         System.out.println("Mark: " + Lorry.getMark());
         System.out.println("Model: " + Lorry.getModel());
 
-        //Вывожу инфо о машине Sportcar
+        //Вывожу инфо о машине Sportscar
 
-        System.out.println("Information about Sportcar:");
+        System.out.println("Information about Sportscar:");
         System.out.println("Type: " + Sportscar.getType());
         System.out.println("Power: " + Sportscar.getPower() + " horsepower");
         System.out.println("Mark: " + Sportscar.getMark());
