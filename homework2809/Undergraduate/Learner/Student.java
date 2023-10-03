@@ -17,15 +17,16 @@ public class Student {
     String lastName;
     int groupNumber;
 
-    public Student(String name, String lastName, int groupNumber) { //konstruktor 1
+    public Student(String name, String lastName, int groupNumber) { //конструктор 1
         this.name = name;
         this.lastName = lastName;
         this.groupNumber = groupNumber;
  }
-    public Student (Student clone){ //clone konstructor2
+    public Student (Student clone){ //  клонирующий конструктор к классу Студент.
         this(clone.name,clone.lastName, clone.getGroupNumber());
         this.groupNumber= clone.groupNumber ;
     }
+   // геттеры и сеттеры для класса Студент
     public String getName() {
         return name;
     }
@@ -50,15 +51,15 @@ public class Student {
         return groupNumber;
     }
 
-    //proverka na polozitelnoe znach. grup
+    //проверка на положительно число группы
 
     public void setGroupNumber(int groupNumber) {
         if (groupNumber < 0) {
+        } else{
             throw new RuntimeException("Group number must be positive");
-        } else
-            this.groupNumber = groupNumber;// esli nomer gruppi boljshe nulja, to peredajom vvedjonnuj nomer gruppi  i vivodim
+        } 
     }
-    public void increaseGroupNumber() {
-        this.groupNumber++;
+      public void goToNextGroup() {
+        groupNumber++;
     }
 }
