@@ -21,6 +21,7 @@ public class Main {
         System.out.println("Power: " + Lorry.getPower() + " horsepower");
         System.out.println("Mark: " + Lorry.getMark());
         System.out.println("Model: " + Lorry.getModel());
+        //можно попробовать вывести так: System.out.println(factory.makeLorry(300, "Volvo", "VNL"));
 
         //Вывожу инфо о машине Sportscar
 
