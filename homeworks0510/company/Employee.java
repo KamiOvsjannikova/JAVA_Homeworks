@@ -1,5 +1,6 @@
 package org.example.homeworks0510.company;
-
+//№2 Создайте классы Сотрудник, Директор, Департамент и Организация. Создайте необходимые поля в каждом классе.
+// Какие виды отношений будут между указанными классами?
 public class Employee {
     private String firstName;
     private String lastName;
