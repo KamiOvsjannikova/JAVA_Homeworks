@@ -36,15 +36,16 @@ public class ArrayListWorkUtil {
     // метод который примет список значений String , и вернет максимальную длину строки в этом списке
     public static int maxLength(List<String> strings) { //length - длинa строки
         int maxLength = 0;
-        for (String str : strings) {
-            if (str.length() > maxLength) {
-                maxLength = str.length();
+        for (String s: strings) {
+            if (s.length() > maxLength) {
+                maxLength = s.length();
             }
         }
         return maxLength; // вернет максимальную длину строки в этом списке
     }
 
     // метод который примет список значений String,дополнительный параметр длину , и вернет список со всеми значениями String переданной длины
+    public static List<String> filterByLength
 
 
     // метод который примет список значений int и вернет список, содержащий только нечетные числа
