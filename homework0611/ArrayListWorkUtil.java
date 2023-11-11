@@ -36,7 +36,7 @@ public class ArrayListWorkUtil {
     // метод который примет список значений String , и вернет максимальную длину строки в этом списке
     public static int maxLength(List<String> strings) { //length - длинa строки
         int maxLength = 0;
-        for (String s: strings) {
+        for (String s : strings) {
             if (s.length() > maxLength) {
                 maxLength = s.length();
             }
@@ -45,13 +45,30 @@ public class ArrayListWorkUtil {
     }
 
     // метод который примет список значений String,дополнительный параметр длину , и вернет список со всеми значениями String переданной длины
-    public static List<String> filterByLength
-
+    public List<String> test1(List<String> list, int number) {
+        List<String> newList = new ArrayList<>();
+        for (String i : list) { // Итерация по каждому элементу входного списка строк.
+            if (number == i.length()) { // Проверка, равна ли длина текущей строки заданному числу.
+                newList.add(i); // Если длина строки равна числу, то добавляю текущую строку в новый список.
+            }
+        }
+        return newList; // возращаю новый список
+    }
 
     // метод который примет список значений int и вернет список, содержащий только нечетные числа
 
-
+    public List<Integer> test2(List<Integer> list) {
+        List<Integer> newList = new ArrayList<>();
+        for (Integer i : list) { //Итерация по каждому элементу входного списка целых чисел.
+            if (i % 2 != 0) { // проверяю явл. ли текущее число нечетным
+                newList.add(i); //Если число нечетное то, добавляю текущее число в новый список.
+            }
+        }
+        list.clear(); // отчистка оригинального списка
+        list.addAll(newList); // добовляю все эелемнты нового списка в оригинальный список
+        return list; // возврашаю оригинальный список с изменениями
+    }
     // метод который примет список значений String, и вернет список этих значений без каких-либо дубликатов.
-
+  
 
 }
