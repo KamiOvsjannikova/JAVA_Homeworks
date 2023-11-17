@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArrayListWorkUtilMain {
+    
     public static void main(String[] args) {
         
         ArrayListWorkUtil arrayListWorkUtil = new ArrayListWorkUtil();// ключик к нужному классу, чтобы понимать программе куда обращаться
