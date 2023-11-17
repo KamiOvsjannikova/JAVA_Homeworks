@@ -15,7 +15,7 @@ public class ArrayListWorkUtilMain {
         listOne.add(" Homework");
         System.out.println("Concatenated String: " + ArrayListWorkUtil.concatenateStrings(listOne));
 
-        List<Integer> List = new ArrayList<>(); //добавляю int  в список List
+        List<Integer> list = new ArrayList<>(); //добавляю int  в список List
         List.add(7); //перадаю целые числа
         List.add(9);
         List.add(17);
