@@ -14,7 +14,7 @@ import java.util.Stack;
 
 public class SolitaireApp {
     public static void main(String[] args) {
-        List<Card> cards = createDeck(5); //список, который заполните картами//  sozdaju kolodu 5*14
+        List<Card> cards = createDeck(3); // sozdaju kolodu 4*13
         shuffleDeck(cards); // peremewivaju kolodu
 
 
@@ -38,17 +38,18 @@ public class SolitaireApp {
         System.out.println("Solitaire status: " + isSolitaireComplete(stack)); //vivod posle sortirovki
     }
 
-    private static List<Card> createDeck(int numDecks) { // 5 suits * 14 Cards
+    private static List<Card> createDeck(int numDecks) { // 4 suits * 13 Cards
         List<Card> cards = new ArrayList<>(); // sozdaju novij spisok cards
         for (Suits suit : Suits.values()) { // cikle foreach dlja perebora vsex enum Suits
             for (Rank rank : Rank.values()) { //cikle foreach dlja perebora vsex enum Rank
-                cards.add(new Card(rank, suit)); // sodaet novij object
+                cards.add(new Card(rank, suit)); // sozdaet novij object
             }
         }
         return cards; // vozvrawaju sozdannij spisok kart
     }
 
     private static void shuffleDeck(List<Card> cards) { // peremewannaja koloda
+
         Collections.shuffle(cards);
     }
 
@@ -60,41 +61,15 @@ public class SolitaireApp {
             int suitIndex = card.getSuits().ordinal();
             suitCount.set(suitIndex, suitCount.get(suitIndex) + 1);
         }
-
+//vsego mastej 4 i po idee vsegda 4 karti na rukax, to sravnivaju strochek , esli bolwe 4 ne sowlosj, esli = 4 sowlsja
         for (int count : suitCount) {
             //proverjaju javl. li znacheni masti nechetnim.
-             if (count % 2 != 1) { // count % 2 - vicislaju ostatok ot delenija , != 1 - ostatok ot delenija ne = 0
+              if (count % 2 == 0) { // count % 2 - vicislaju ostatok ot delenija , == 0 - nechetnoe //itog kol-vo kart > 4 sowlo
                 return false;
             }
         }
         return true;
     }
 }
-        // Пасьянс сошелся, если осталась по 1 карте каждой масти (число карт каждой масти нечетное)
-//        int trumpCount = 0, diamondsCount = 0, heartsCount = 0, clubsCount = 0, spadesCount = 0;
-//
-//        for (Card card : stack) {
-//            switch (card.getSuits()) {
-//                case TRUMP:
-//                    trumpCount++;
-//                    break;
-//                case DIAMONDS:
-//                    diamondsCount++;
-//                    break;
-//                case HEARTS:
-//                    heartsCount++;
-//                    break;
-//
-//                case CLUBS:
-//                    clubsCount++;
-//                    break;
-//                case SPADES:
-//                    spadesCount++;
-//                    break;
-//            }
-//        }
-//
-//        return trumpCount % 2 == 1 && diamondsCount % 2 == 1 && heartsCount % 2 == 1 && clubsCount % 2 == 1 && spadesCount % 2 == 1;
-
 
 
