@@ -1,6 +1,6 @@
 package org.example.homework120124;
 
-public class StringPredicate {
+public class StringPredicate implements Predicate<Product>  {
     private String field;
     private String value;
 
